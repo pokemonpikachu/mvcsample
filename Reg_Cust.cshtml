@@ -1,0 +1,30 @@
+@model WebApplication6.Models.cus_79
+@{
+    ViewBag.Title = "Reg_Cust";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<h2>Reg_Cust</h2>
+    <table>
+        <hr/>
+
+        @Html.ValidationSummary(true)
+        <tr>
+            <td>@Html.LabelFor(b=>b.name)</td>
+            <td>@Html.TextBoxFor(b=>b.name)</td>
+            <td>@Html.ValidationMessageFor(b=>b.name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(b => b.city)</td>
+            <td>@Html.TextBoxFor(b => b.city)</td>
+            <td>@Html.ValidationMessageFor(b => b.city)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Register" /></td>
+        </tr>
+    </table>
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobstrusive.min.js"></script>
+}
