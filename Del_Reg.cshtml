@@ -1,0 +1,18 @@
+@model WebApplication6.Models.cus_79
+@{
+    ViewBag.Title = "Del_Reg";
+}
+@using (Html.BeginForm())
+{
+<h2>Del_Reg</h2>
+    <table>
+        <tr>
+            <td>@Html.LabelFor(b=>b.id)</td>
+            <td>@Html.TextBoxFor(b=>b.id)</td>
+            <td>@Html.ValidationMessageFor(b=>b.id)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Delete" /></td>
+        </tr>
+    </table>
+}
