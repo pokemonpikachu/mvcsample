@@ -1,0 +1,28 @@
+@model WebApplication6.Models.cus_79
+@{
+    ViewBag.Title = "View_Reg";
+}
+@using (Html.BeginForm())
+{
+<h2>View_Reg</h2>
+<table align="center" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+
+
+
+    @foreach (var v in ViewBag.Table)
+    {
+
+        <tr>
+            <td>@v.id</td>
+            <td>@v.name</td>
+            <td>@v.city</td>
+        </tr>
+
+    }
+</table>
+}
