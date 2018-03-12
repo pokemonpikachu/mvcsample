@@ -1,0 +1,30 @@
+@model WebApplication6.Models.cus_79
+@{
+    ViewBag.Title = "Update_Reg";
+}
+@using (Html.BeginForm())
+{ 
+<h2>Update_Reg</h2>
+<table>
+    <tr>
+        <td>@Html.LabelFor(p => p.id)</td>
+        <td>@Html.TextBoxFor(p=>p.id)</td>
+         <td>@Html.ValidationMessageFor(p=>p.id)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(p => p.name)</td>
+        <td>@Html.TextBoxFor(p => p.name)</td>
+        <td>@Html.ValidationMessageFor(p => p.name)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(p => p.city)</td>
+        <td>@Html.TextBoxFor(p => p.city)</td>
+        <td>@Html.ValidationMessageFor(p => p.city)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Update" /></td>
+    </tr>
+
+</table>
+}
+
