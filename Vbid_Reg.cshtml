@@ -1,0 +1,35 @@
+@model WebApplication6.Models.cus_79
+@{
+    ViewBag.Title = "Vbid_Reg";
+}
+@using (Html.BeginForm())
+{
+<h2>Vbid_Reg</h2>
+    <table>
+        <tr>
+            <td>@Html.LabelFor(c=>c.id)</td>
+            <td>@Html.TextBoxFor(c=>c.id)</td>
+            <td>@Html.ValidationMessageFor(c=>c.id)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="View By id" /></td>
+        </tr>
+        
+    </table>
+}
+<table>
+    <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>City</th>
+    </thead>
+    @foreach(var y in ViewBag.table)
+    {
+        <tr>
+            <td>@y.id</td>
+            <td>@y.name</td>
+            <td>@y.city</td>
+        </tr>
+    }
+</table>
+
